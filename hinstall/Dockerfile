@@ -19,7 +19,7 @@ FROM debian:11-slim as houdini-install
 
 # Update and install required packages
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends iputils-ping netcat inetutils-telnet inetutils-ftp procps && \
+    apt-get install -y --no-install-recommends iputils-ping netcat-openbsd inetutils-telnet inetutils-ftp procps && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
