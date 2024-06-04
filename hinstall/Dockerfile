@@ -15,7 +15,7 @@ RUN mkdir /houdini
 RUN python3 hinstall/houinstall.py
 
 # SECOND STAGE: Install and initialize Houdini
-FROM debian:11-slim as houdini-install
+FROM debian:12-slim as houdini-install
 
 # Update and install required packages
 RUN apt-get update && \
