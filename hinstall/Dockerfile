@@ -38,6 +38,6 @@ RUN yes | /houdiniInstaller/build/houdini.install --auto-install --accept-EULA $
 RUN rm -r /houdiniInstaller
 
 # THIRD STAGE: Copy houdini-install image and un-cache unnecessary installation files
-FROM debian:11-slim
+FROM debian:12-slim
 COPY --from=houdini-install / /
 ENV PATH="${PATH}:/opt/houdini/build/houdini/sbin:/opt/houdini/build/bin"
